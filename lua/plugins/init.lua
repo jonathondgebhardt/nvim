@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -14,43 +14,45 @@ return {
   },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim",
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
         "lua",
         "vimdoc",
-        -- This breaks indentation
-        -- "cpp",
-        "cmake"
-  		},
-  	},
-    -- This is an experimental feature. Indentation was better but not perfect.
-    -- setup = {
-    --   indent = {
-    --     enable = true,
-    --     disable = { "c", "cpp" }
-    --   }
-    -- }
+        "cpp",
+        "cmake",
+      },
+    },
+    config = function()
+      local options = {
+        indent = {
+          enable = true,
+          disable = { "c", "cpp" },
+        },
+      }
+
+      return options
+    end,
   },
   {
     "kdheepak/lazygit.nvim",
     lazy = true,
     cmd = {
-        "LazyGit",
-        "LazyGitConfig",
-        "LazyGitCurrentFile",
-        "LazyGitFilter",
-        "LazyGitFilterCurrentFile",
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
     },
     -- optional for floating window border decoration
     dependencies = {
-        "nvim-lua/plenary.nvim",
+      "nvim-lua/plenary.nvim",
     },
     -- setting the keybinding for LazyGit with 'keys' is recommended in
     -- order to load the plugin when the command is run for the first time
     keys = {
-        { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-    }
-  }
+      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
+  },
 }
