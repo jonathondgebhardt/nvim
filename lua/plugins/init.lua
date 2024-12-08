@@ -25,6 +25,13 @@ return {
         "cmake"
   		},
   	},
+    -- This is an experimental feature. Indentation was better but not perfect.
+    -- setup = {
+    --   indent = {
+    --     enable = true,
+    --     disable = { "c", "cpp" }
+    --   }
+    -- }
   },
   {
     "kdheepak/lazygit.nvim",
