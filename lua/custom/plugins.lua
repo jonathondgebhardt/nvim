@@ -26,7 +26,12 @@ local plugins = {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "vim", "lua", "vimdoc", "cpp", "cmake"
+        "vim",
+        "lua",
+        "vimdoc",
+        -- This breaks indentation of new lines
+        -- "cpp",
+        "cmake"
       }
     }
   },
