@@ -13,6 +13,14 @@ local plugins = {
         "clangd"
       }
     }
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim", "lua", "vimdoc", "cpp", "cmake"
+      }
+    }
   }
 }
 
