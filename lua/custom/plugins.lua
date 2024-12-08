@@ -29,11 +29,14 @@ local plugins = {
         "vim",
         "lua",
         "vimdoc",
-        -- This breaks indentation of new lines
-        -- "cpp",
+        "cpp",
         "cmake"
       }
-    }
+    },
+    config = function()
+      require "plugins.configs.treesitter"
+      require "custom.configs.treesitter"
+    end,
   },
   {
     "kdheepak/lazygit.nvim",
