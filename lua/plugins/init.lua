@@ -30,6 +30,7 @@ return {
           enable = true,
           disable = { "c", "cpp" },
         },
+        require "custom.configs.treesitter",
       }
 
       return options
