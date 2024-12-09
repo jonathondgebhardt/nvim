@@ -11,6 +11,9 @@ return {
     config = function()
       require "configs.lspconfig"
     end,
+    keys = {
+      { "<leader>go", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "LSP switch source/header" }
+    },
   },
 
   {
