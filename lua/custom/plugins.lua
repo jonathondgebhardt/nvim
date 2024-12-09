@@ -12,6 +12,9 @@ local plugins = {
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end,
+    keys = {
+      { "<leader>go", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "LSP switch source/header" }
+    },
   },
   {
     "williamboman/mason.nvim",
