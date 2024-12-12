@@ -25,6 +25,7 @@ return {
         "vimdoc",
         "cpp",
         "cmake",
+        "python"
       },
     },
     config = function()
