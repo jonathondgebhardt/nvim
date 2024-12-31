@@ -32,8 +32,6 @@ opt.number = true
 opt.numberwidth = 2
 opt.ruler = false
 
-opt.scrolloff = 10
-
 -- disable nvim intro
 opt.shortmess:append "sI"
 
