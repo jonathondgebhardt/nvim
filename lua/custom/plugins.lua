@@ -22,6 +22,8 @@ local plugins = {
       ensure_installed = {
         "clangd",
         "clang-format",
+        -- "pylsp",
+        "autopep8",
       }
     }
   },
@@ -33,7 +35,8 @@ local plugins = {
         "lua",
         "vimdoc",
         "cpp",
-        "cmake"
+        "cmake",
+        "python"
       }
     },
     config = function()
