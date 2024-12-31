@@ -2,12 +2,12 @@ require "nvchad.options"
 
 -- add yours here!
 
-local o = vim.o
-o.cursorlineopt = "both" -- to enable cursorline!
-o.scrolloff = 10
+vim.o.cursorlineopt = "both" -- to enable cursorline!
+vim.o.scrolloff = 10
+vim.o.guifont = "SauceCodePro Nerd Font:h12"
 
--- local opt = vim.opt
--- opt.tabstop = 4
--- opt.smartindent = true
--- opt.shiftwidth = 4
--- opt.expandtab = true
+if vim.g.neovide then
+  vim.g.neovide_hide_mouse_when_typing = true
+  -- vim.g.neovide_cursor_animation_length = 0.13
+  -- vim.g.neovide_cursor_trail_size = 0.8
+end
