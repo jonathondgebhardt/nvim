@@ -12,7 +12,7 @@ return {
       require "configs.lspconfig"
     end,
     keys = {
-      { "<leader>go", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "LSP switch source/header" }
+      { "<leader>go", "<cmd>ClangdSwitchSourceHeader<cr>", desc = "LSP switch source/header" },
     },
   },
 
@@ -25,20 +25,9 @@ return {
         "vimdoc",
         "cpp",
         "cmake",
-        "python"
+        "python",
       },
     },
-    config = function()
-      local options = {
-        indent = {
-          enable = true,
-          disable = { "c", "cpp" },
-        },
-        require "custom.configs.treesitter",
-      }
-
-      return options
-    end,
   },
   {
     "numToStr/Comment.nvim",
