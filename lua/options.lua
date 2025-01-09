@@ -5,6 +5,7 @@ require "nvchad.options"
 vim.o.cursorlineopt = "both" -- to enable cursorline!
 vim.o.scrolloff = 10
 vim.o.guifont = "SauceCodePro Nerd Font:h12"
+vim.o.autoread = true
 
 vim.o.autoindent = true
 vim.o.expandtab = false
